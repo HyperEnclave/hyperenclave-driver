@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Jailhouse, a Linux-based partitioning hypervisor
+#
+# Copyright (c) Siemens AG, 2014
+#
+# Authors:
+#  Jan Kiszka <jan.kiszka@siemens.com>
+#
+# This work is licensed under the terms of the GNU GPL, version 2.  See
+# the COPYING file in the top-level directory.
+#
+
+# Modified by The HyperEnclave Project in 2020
+# SPDX-License-Identifier: GPL-2.0
+#
+# HyperEnclave kernel module.
+#
+# Copyright (C) 2020-2023 The HyperEnclave Project. All rights reserved.
+
+cd "$1" > /dev/null
+
+describe="`git describe --long --dirty --always --match "v[0-9].[0-9]*"`"
+version="`echo $describe | sed -e 's/\([^-]*\)-\(.*\)/\1 (\2)/'`"
+
+cd - > /dev/null
+
+echo "#define HE_VERSION \"$version\""
