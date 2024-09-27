@@ -1,3 +1,8 @@
+# \*\*REPOSITORY MOVED TO A NEW LOCATION\*\*
+**Note**: HyperEnclave-driver repository has been moved to a new location: [https://github.com/asterinas/hyperenclave-driver](https://github.com/asterinas/hyperenclave-driver).
+
+All development will continue there.
+
 # Introduction
 
 This is HyperEnclave kernel module used to start HyperEnclave. See [HyperEnclave Introduction](https://github.com/HyperEnclave/hyperenclave/blob/master/README.md) for details on what is HyperEnaclave and how to use it.
